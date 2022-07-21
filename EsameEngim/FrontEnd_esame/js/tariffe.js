@@ -16,8 +16,10 @@ Promise.all([
   ),
 ]).then((data) => {
     let results = data;
-    console.log(results);
-    results.
+    /* console.log(results); */
+    results.map(function (result) {
+      console.log(result);
+    });
 });
 
 
