@@ -1,4 +1,4 @@
-//*******************fetch ordini***********************//
+//*******************fetch tariffe***********************//
 const tableTariffe = document.getElementById("tbodyTariffe");
 const getTariffe = "http://localhost:8091/spedizionearticoli/tariffe_corriere";
 

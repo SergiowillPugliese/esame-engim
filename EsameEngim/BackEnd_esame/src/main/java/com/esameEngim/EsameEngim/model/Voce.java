@@ -10,8 +10,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Voce {
-    private Integer id;
     private Integer idOrdine;
+    private Integer Articolo;
     private Integer quantita;
-    private Integer idArticolo;
 }

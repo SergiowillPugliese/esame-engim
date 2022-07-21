@@ -18,9 +18,8 @@ public class VoceRepository {
             ResultSet resultSet = stmt.executeQuery();
             while (resultSet.next()){
                 Voce voce = new Voce(
-                        resultSet.getInt("id"),
                         resultSet.getInt("id_ordine"),
-                        resultSet.getInt("id_articolo"),
+                        resultSet.getInt("articolo"),
                         resultSet.getInt("quantità")
                 );
                 listaVoce.add(voce);
