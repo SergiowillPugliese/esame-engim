@@ -1,29 +1,35 @@
 //*******************fetch ordini***********************//
-const tableOrdine = document.getElementById("tbodyOrdini");
-const getOrdine = "http://localhost:8091/spedizionearticoli/ordini";
+const tableTariffe = document.getElementById("tbodyTariffe");
+const getTariffe = "http://localhost:8091/spedizionearticoli/tariffe_corriere";
 
-fetch(getOrdine)
+fetch(getTariffe)
   .then((response) => {
     return response.json();
   })
   .then((data) => {
-    let ordine = data;
+    let tariffa = data;
 
-    ordine.map(function (ordini) {
-      console.log(ordini);
+    tariffa.map(function (tariffe) {
+      console.log(tariffe);
       let table = document.createElement("tr");
       let id = document.createElement("td");
-      let numero = document.createElement("td");
-      let data = document.createElement("td");
+      let nomeCorriere = document.createElement("td");
+      let nomeTariffa = document.createElement("td");
+      let pesoMassimo = document.createElement("td");
+      let costo = document.createElement("td");
 
-      id.innerHTML = `${ordini.id}`;
-      numero.innerHTML = `${ordini.numero}`;
-      data.innerHTML = `${ordini.data}`;
-
+      id.innerHTML = `${tariffe.id}`;
+      nomeCorriere.innerHTML = `${tariffe.nome}`;
+      nomeTariffa.innerHTML = `${tariffe.nomeTariffa}`;
+      pesoMassimo.innerHTML = `${tariffe.pesoMassimo}`;
+      costo.innerHTML = `${tariffe.costo}`;
+      
       table.appendChild(id);
-      table.appendChild(numero);
-      table.appendChild(data);
-      tableOrdine.appendChild(table);
+      table.appendChild(nomeCorriere);
+      table.appendChild(nomeTariffa);
+      table.appendChild(pesoMassimo);
+      table.appendChild(costo);
+      tableTariffe.appendChild(table);
     });
   })
   .catch(function (error) {

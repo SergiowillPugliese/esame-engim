@@ -13,7 +13,7 @@ public class TariffaCorriereRepository {
 
         try{
             Connection conn = DriverManager.getConnection(DBconnection.DB, DBconnection.USER, DBconnection.PSW);
-            PreparedStatement stmt = conn.prepareStatement("select * from tariffa_corrieri");
+            PreparedStatement stmt = conn.prepareStatement("select * from tariffe_corrieri");
             ResultSet rs = stmt.executeQuery();
 
             while(rs.next()){
