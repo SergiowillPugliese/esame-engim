@@ -18,16 +18,27 @@
         <a href="/index.html">index</a>
       </div>
       <div class="container" id="containerArticoli">
-            <table class="table" id="articoli">
-              <thead>
-                  <th>Id</th>
-                  <th>Codice</th>
-                  <th>Descrizione</th>
-                  <th>peso</th>
-              </thead>
-              <tbody id="tbodyArticoli"></tbody>
-            </table>
-        </div>
+        <table class="table" id="articoli">
+          <thead>
+            <th>Id</th>
+            <th>Codice</th>
+            <th>Descrizione</th>
+            <th>peso</th>
+          </thead>
+          <tbody id="tbodyArticoli"></tbody>
+        </table>
+      </div>
+
+      <div class="container">
+        <form action="articoli.html">
+          <label for="id">Id:</label><br />
+          <input type="text" id="id" name="id" value="" /><br />
+          <label for="codice">Codice:</label><br />
+          <input type="text" id="codice" name="codice" value="" /><br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
